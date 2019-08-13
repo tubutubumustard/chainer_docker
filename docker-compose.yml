@@ -1,0 +1,9 @@
+version: '3'
+services:
+  chainer:
+    build: ./
+    volumes:
+      - ./workdir:/workdir
+    command: jupyter lab --port 8000 --ip=0.0.0.0 --allow-root --NotebookApp.token=''
+    ports:
+      - 50020:8000
